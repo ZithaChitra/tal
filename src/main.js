@@ -1,5 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import header from './components/header/index.vue'
+import './style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.component('comp-header', header)
+
+
+app.mount('#app')

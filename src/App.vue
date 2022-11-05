@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <comp-header></comp-header>
   Well hello friend
 </template>
 
