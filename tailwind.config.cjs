@@ -7,8 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "light-gray-1": "#f4f4f4",
-        "tal-text-gray": "#4d4d4f"
+        "tal-gray-100": "#f4f4f4",
+        "tal-gray-200": "#4d4d4f",
+        "tal-blue-200": "#0b79bf",
+        "tal-pink-200": "#f4697a",
+        "tal-green-200": "#1c8644", 
+      },
+      fontSize: {
+        "sm": "13px",
       }
     },
   },

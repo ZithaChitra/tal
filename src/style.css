@@ -6,6 +6,14 @@
 
 @layer utilities{
   .tal-text{
-    @apply text-tal-text-gray
+    @apply text-tal-gray-200 text-sm
+  }
+
+  .tal-link{
+    @apply hover:text-tal-blue-200 hover:underline decoration-tal-blue-200 py-[1px] px-[15px]
+  }
+
+  .tal-border-r{
+    @apply border-r-[0.5px] border-tal-gray-200
   }
 }
