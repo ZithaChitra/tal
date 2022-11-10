@@ -1,14 +1,26 @@
 <template>
-    <header class="bg-tal-blue-200">
+    <header class="hidden md:block bg-tal-blue-200">
         <div class="lg:container mx-auto px-4 py-2 tal-text">
             <div class="lg:flex">
                 <div class="hidden lg:block relative w-[180px] mr-5">
                     <button class="bg-tal-black-100 text-white rounded-t-sm w-full p-1">
                         Shop by department
-                    </button>                             
-                    <ul class="absolute bg-white w-full shadow py-2">
-                        <li v-for="dep in departments" :key="dep.value" class="px-2 hover:bg-tal-blue-200 hover:text-white"><a @click.prevent href="#">{{ dep.title }}</a></li>
-                    </ul>
+                    </button>
+                    <div class="absolute flex">
+                        <ul class="bg-white w-[180px] shadow pt-2">
+                            <li v-for="dep in departments" :key="dep.value" 
+                                @mouseover="showDepSideNav=true; department=dep.title"
+                                @mouseleave="showDepSideNav=false"
+                                class="px-2 hover:bg-tal-blue-200 hover:text-white">
+                                    <a @click.prevent href="#">{{ dep.title }}</a></li>
+                                <img src="/daily_deals.webp" alt="">
+                        </ul>
+                        <div v-show="showDepSideNav" class="grid grid-cols-deps border shadow">
+                            <div class="w-[180px] bg-tal-gray-100">{{ department}}</div>
+                            <div class="w-[180px] bg-white">Col 2</div>
+                            <div class="w-[180px] "><img src="/shop_by_dep.webp" alt="" srcset=""></div>
+                        </div>
+                    </div>                             
                 </div>
 
                 <div class="grow">
@@ -37,21 +49,44 @@
 
         </div>
     </header>
+    <div class="bg-white">
+        <div class="lg:container mx-auto md:px-4 py-2">
+            <div class="lg:flex">
+                <div class="hidden lg:block w-[180px] mr-5">
+                    hello
+                </div>
+                <div class="lg:flex grow">
+                    <div class="grow">
+                        <div class="w-full overflow-hidden lg:pr-3">
+                            <!-- hi im image -->
+                        <img src="/heroe_img_2.jpeg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <p class="w-[150px] h-[53px] flex justify-center items-center rounded-sm bg-tal-blue-200 text-white px-1">
+                            <span>Where's my order ?</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 
 <script>
+import ShopByDepSideNav from './ShopByDepSideNav.vue'
 
 export default {
-
+    components: {
+        ShopByDepSideNav
+    },
     data(){
         return {
             // needs to move to external file/data source
-          departments: [
-                {
-                    title: 'All Departments',
-                    value: 'all'
-                },
+            showDepSideNav: false,
+            department: '',
+            departments: [
                 {
                     title: 'Baby & Toddler',
                     value: '10'

@@ -1,5 +1,5 @@
 <template>
-    <div class="md:hidden border-b drop-shadow-md">
+    <div class="md:hidden border-b drop-shadow-md bg-white">
         <div class="flex justify-between items-center py-4 px-4">
             <div><font-awesome-icon icon="fa-bars" /></div>
             <a @click.prevent href="/"><img src="/logo.svg" alt="logo"></a>

@@ -16,6 +16,9 @@ module.exports = {
       },
       fontSize: {
         "sm": "13px",
+      },
+      gridTemplateColumns: {
+        "deps": "repeat(3, 180px)",
       }
     },
   },
