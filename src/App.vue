@@ -1,11 +1,19 @@
-<script setup>
-
-</script>
 
 <template>
-  <comp-header></comp-header>
+  <div class="mb-5">
+    <comp-header></comp-header>
+  </div>
+  <div class="mb-10">
+    <products></products>
+  </div>
 </template>
 
-<style scoped>
+<script >
+import Products from './components/products/index.vue'
 
-</style>
+export default {
+  components:{
+    Products
+  }
+}
+</script>
