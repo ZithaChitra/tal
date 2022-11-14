@@ -19,6 +19,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         "deps": "repeat(3, 180px)",
+      },
+      height: {
+        "hero": "calc(100vh - 136px)"       
       }
     },
   },
