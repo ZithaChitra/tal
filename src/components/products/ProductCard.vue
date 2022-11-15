@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white shadow-sm rounded hover:shadow-md ease-in-out duration-300 p-2">
+    <div class="bg-white shadow rounded hover:shadow-lg ease-in-out duration-300 p-2">
         <div class="h-[362px]">
             <img src="/prod.file" >
         </div>

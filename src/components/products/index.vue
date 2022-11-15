@@ -1,17 +1,15 @@
 <template>
     <div class="lg:container mx-auto md:px-4 px-2 py-2">
         <div class="lg:flex">
-            <!-- <div class="grow grid grid-cols-3 gap-5">
-                <product-card></product-card>          
-            </div> -->
-            <div class="grow relative bg-gray-500" style="width:calc(100% - 180px);margin:20px auto;height:100px">
-                <Carousel :items-to-show="2.5" :wrap-around="true">
+            <div class="grow relative" style="width:calc(100% - 180px);margin:20px auto;">
+                <Carousel :items-to-show="2.5" :wrap-around="false">
                     <Slide v-for="slide in 10" :key="slide">
-                    <div class="carousel__item">{{ slide }}</div>
+                        <div class="carousel__item">
+                            <product-card></product-card>          
+                        </div>
                     </Slide>
-
                     <template #addons>
-                    <Navigation />
+                        <Navigation />
                     </template>
                 </Carousel>
             </div>
