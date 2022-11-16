@@ -48,7 +48,7 @@
 
         </div>
     </header>
-    <div class="bg-white h-hero">
+    <div v-if="showHero" class="bg-white h-hero">
         <div class="lg:container mx-auto md:px-4 py-2">
             <div class="lg:flex">
                 <div class="hidden lg:block w-[180px] mr-5">
@@ -80,6 +80,7 @@ export default {
     components: {
         ShopByDepSideNav
     },
+    inject: ['showHero'],
     data(){
         return {
             showDepSideNav: false,
@@ -87,7 +88,7 @@ export default {
             departments: departments,
             department: '',
             subDeps,
-            featuredStores
+            featuredStores,
         }
     },
 }

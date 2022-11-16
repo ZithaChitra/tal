@@ -43,6 +43,12 @@
 
 
     export default {
+        props: ['showHero'],
+        provide(){
+            return {
+                showHero: this.showHero
+            }
+        },
         components: {
             SecondaryHeader
         }
