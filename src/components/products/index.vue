@@ -1,6 +1,6 @@
 <template>
     <div class="lg:container mx-auto md:px-4 px-2 py-2">
-        <div class="lg:flex">
+        <div class="hidden lg:flex">
             <div class="grow relative" style="width:calc(100% - 180px);margin:20px auto;">
                 <Carousel :items-to-show="2.5" :wrap-around="false">
                     <Slide v-for="slide in 10" :key="slide">
@@ -14,8 +14,15 @@
                 </Carousel>
             </div>
 
-            <div class="hidden lg:block w-[180px]"> me too </div>
+            <div class="hidden lg:block w-[180px]"> </div>
 
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:hidden px-2 md:px-4 gap-2">
+            <product-card></product-card>          
+            <product-card></product-card>          
+            <product-card></product-card>          
+            <product-card></product-card>          
         </div>
     </div>
 </template>

@@ -66,4 +66,10 @@
             </div>
         </div>
     </div>
+    <div class="flex items-center justify-center h-[50px] bg-tal-blue-200 text-white">
+        <span class="flex items-center justify-center">&copy;</span>
+        <p>
+           demo app
+        </p>
+    </div>
 </template>
