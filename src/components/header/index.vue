@@ -2,7 +2,8 @@
     <div class="md:hidden border-b drop-shadow-md bg-white">
         <div class="flex justify-between items-center py-4 px-4">
             <div><font-awesome-icon icon="fa-bars" /></div>
-            <a @click.prevent href="/"><img src="/logo.svg" alt="logo"></a>
+
+            <router-link to="/"><img src="/logo.svg" alt="logo"></router-link>
             <div class="flex">
                 <div class="mr-2"><font-awesome-icon icon="fa-magnifying-glass" /></div>
                 <div><font-awesome-icon icon="fa-cart-shopping" /></div>
@@ -12,7 +13,7 @@
     <div class="hidden md:block bg-tal-gray-100">
         <div class="flex justify-between lg:container mx-auto px-4 py-3 tal-text ">
             <div class="flex items-center">
-                <a @click.prevent href="/"><img src="/logo.svg" alt="logo" class="mr-5"></a>
+                <router-link to="/"><img src="/logo.svg" alt="logo" class="mr-5"></router-link>
                 <ul class="flex">
                     <li class="list-none"><a @click.prevent class="tal-link lg:tal-border-r" href="#"> Help Center</a></li>
                     <li class="list-none hidden lg:block"><a @click.prevent class="tal-link" href="#">Sell on Takealot</a></li>
@@ -43,14 +44,14 @@
 
 
     export default {
-        props: ['showHero'],
-        provide(){
-            return {
-                showHero: this.showHero
-            }
-        },
         components: {
             SecondaryHeader
+        },
+        props: [ 'showRelatedProdNavBar' ],
+        provide(){
+            return {
+                showRelatedProdNavBar: this.showRelatedProdNavBar
+            }
         }
     }
 </script>

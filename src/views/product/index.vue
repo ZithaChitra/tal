@@ -1,5 +1,5 @@
 <template>
-    <comp-header :showHero="false"></comp-header>
+    <comp-header></comp-header>
     hello friend
 </template>
 

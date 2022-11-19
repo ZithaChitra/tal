@@ -19,7 +19,9 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 lg:hidden px-2 md:px-4 gap-2">
-            <product-card></product-card>          
+            <router-link to="/product">
+                <product-card></product-card>          
+            </router-link>
             <product-card></product-card>          
             <product-card></product-card>          
             <product-card></product-card>          
