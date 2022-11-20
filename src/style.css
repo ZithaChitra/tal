@@ -16,4 +16,8 @@
   .tal-border-r{
     @apply border-r-[0.5px] border-tal-gray-200
   }
+
+  .tal-link-blue{
+    @apply text-tal-blue-200 hover:underline
+  }
 }
